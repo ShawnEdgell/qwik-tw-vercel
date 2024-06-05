@@ -7,11 +7,6 @@ export default component$(() => {
   return (
     <>
       <h1>Theme</h1>
-      <input
-        type="checkbox"
-        value="dark"
-        class="toggle theme-controller mb-6"
-      />
       <Theme />
     </>
   );
