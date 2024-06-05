@@ -2,18 +2,25 @@
 import { component$ } from "@builder.io/qwik";
 import { Link } from "@builder.io/qwik-city";
 
+// Define constants for button styles and link attributes
+const buttonStyles = "md:hover:text-primary";
+const links = [
+  { href: "/", text: "Home" },
+  { href: "/about", text: "About" },
+  { href: "/contact", text: "Contact" },
+  { href: "/theme", text: "Theme" },
+];
+
 export const Navigation = component$(() => {
   return (
-    <ul class="menu menu-horizontal bg-base-300 flex w-full justify-center py-3.5">
-      <li>
-        <Link href="/">Home</Link>
-      </li>
-      <li>
-        <Link href="/about">About</Link>
-      </li>
-      <li>
-        <Link href="/contact">Contact</Link>
-      </li>
+    <ul class="bg-base-300 flex w-full justify-center gap-6 py-5">
+      {links.map((link, index) => (
+        <li key={index}>
+          <Link href={link.href} class={buttonStyles}>
+            {link.text}
+          </Link>
+        </li>
+      ))}
     </ul>
   );
 });

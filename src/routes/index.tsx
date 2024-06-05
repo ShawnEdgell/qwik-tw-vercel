@@ -2,13 +2,11 @@
 import { component$ } from "@builder.io/qwik";
 import { Link } from "@builder.io/qwik-city";
 import type { DocumentHead } from "@builder.io/qwik-city";
-import { Blocks } from "../components/blocks/blocks";
 
 export default component$(() => {
   return (
     <div class="hero-content text-center">
       <div class="max-w-md">
-        <Blocks />
         <h1 class="text-5xl font-bold">Hello there</h1>
         <p class="py-6">
           Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda
