@@ -1,9 +1,11 @@
+// src/routes/layout.tsx
 import { component$, Slot } from "@builder.io/qwik";
+import { Navigation } from "../components/navigation/navigation";
+import { Footer } from "../components/footer/footer";
 import type { RequestHandler } from "@builder.io/qwik-city";
 
 export const onGet: RequestHandler = async ({ cacheControl }) => {
   // Control caching for this request for best performance and to reduce hosting costs:
-  // https://qwik.dev/docs/caching/
   cacheControl({
     // Always serve a cached response by default, up to a week stale
     staleWhileRevalidate: 60 * 60 * 24 * 7,
@@ -13,5 +15,17 @@ export const onGet: RequestHandler = async ({ cacheControl }) => {
 };
 
 export default component$(() => {
-  return <Slot />;
+  return (
+    <div class="flex min-h-screen flex-col">
+      <header class="fixed top-0 z-10 w-full">
+        <Navigation />
+      </header>
+      <main class="mt-16 flex w-full flex-1 flex-col items-center justify-center">
+        <Slot />
+      </main>
+      <footer class="w-full">
+        <Footer />
+      </footer>
+    </div>
+  );
 });

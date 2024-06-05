@@ -1,9 +1,28 @@
-/**
- * Tailwind CSS imports
- * View the full documentation at https://tailwindcss.com
- */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  html,
+  body {
+    @apply m-0 box-border h-full p-0;
+  }
 
+  *,
+  *::before,
+  *::after {
+    @apply box-border;
+  }
+
+  body {
+    @apply flex min-h-screen flex-col;
+  }
+
+  main {
+    @apply flex flex-1 flex-col;
+  }
+
+  img {
+    @apply h-auto max-w-full;
+  }
+}
