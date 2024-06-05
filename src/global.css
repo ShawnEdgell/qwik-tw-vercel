@@ -3,19 +3,18 @@
 @tailwind utilities;
 
 @layer base {
-  html,
+  html {
+    @apply overflow-y-scroll;
+  }
+
   body {
-    @apply m-0 box-border h-full overscroll-none p-0;
+    @apply m-0 box-border flex h-full min-h-screen flex-col overscroll-none p-0;
   }
 
   *,
   *::before,
   *::after {
     @apply box-border;
-  }
-
-  body {
-    @apply flex min-h-screen flex-col;
   }
 
   main {
