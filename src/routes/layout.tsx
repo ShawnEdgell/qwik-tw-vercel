@@ -16,11 +16,11 @@ export const onGet: RequestHandler = async ({ cacheControl }) => {
 
 export default component$(() => {
   return (
-    <div class="flex min-h-screen flex-col">
+    <div class="flex min-h-screen flex-col items-center overscroll-none">
       <header class="fixed top-0 z-10 w-full">
         <Navigation />
       </header>
-      <main class="mt-16 flex w-full flex-1 flex-col items-center justify-center">
+      <main class="prose mt-16 flex w-full flex-1 flex-col items-center justify-center px-4 py-16">
         <Slot />
       </main>
       <footer class="w-full">

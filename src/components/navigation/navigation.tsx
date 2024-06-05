@@ -7,7 +7,6 @@ export const Navigation = component$(() => {
       <a href="/">Home</a>
       <a href="/about">About</a>
       <a href="/contact">Contact</a>
-      <a href="/docs/1234">Docs</a>
     </nav>
   );
 });
