@@ -17,20 +17,17 @@ export const Navigation = component$(() => {
       <div class="navbar relative z-20 bg-white py-3">
         <div class="flex-none lg:hidden"></div>
         <div class="flex-1">
-          <Link href="/" class="btn btn-ghost text-2xl">
+          <Link href="/" class="ml-4 text-2xl font-bold">
             Qwik
           </Link>
         </div>
         <div class="flex-none">
-          <button
-            class="btn btn-square btn-ghost lg:hidden"
-            onClick$={toggleMenu}
-          >
+          <button class=" mr-4 lg:hidden" onClick$={toggleMenu}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
               viewBox="0 0 24 24"
-              class="inline-block h-8 w-8 stroke-current"
+              class="inline-block h-9 w-9 stroke-current"
             >
               <path
                 stroke-linecap="round"
