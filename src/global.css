@@ -8,7 +8,7 @@
   }
 
   body {
-    @apply m-0 box-border flex h-full min-h-screen flex-col overscroll-none p-0;
+    @apply box-border flex h-full min-h-screen flex-col;
   }
 
   *,
